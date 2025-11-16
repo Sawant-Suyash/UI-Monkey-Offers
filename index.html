@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Conversion Audit + One Fix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --dark-color: #0c1223;
+            --light-color: #f0f0ec;
+            --accent-color: #0c122390;
+        }
+        
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            padding: 20px 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .logo img {
+            width: 20%;
+            height: auto;
+        }
+
+        .nav-section {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 70vw;
+            margin: 0 auto;
+        }
+
+        .nav-section h2 {
+            font-size: 52px;
+            margin-bottom: 40px;
+        }
+
+        .nav-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .nav-card {
+            background-color: #c0c4ca96;
+            border-radius: 12px;
+            padding: 40px;
+            width: 100vw;
+            min-width: 230px;
+            text-align: center;
+        }
+
+        .nav-percentage {
+            height: 60px;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            border-radius: 20px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+
+        .nav-percentage:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .nav-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .nav-title span {
+            color: var(--dark-color);
+            opacity: 0.7;
+        }
+
+        .nav-description {
+            font-size: 18px;
+            color: var(--accent-color);
+        }
+        
+        .contact-section {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid var(--accent-color);
+            margin-top: 30px;
+        }
+
+        .contact-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-color);
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 1280px) {
+
+            header {
+                padding: 20px 20px;
+            }
+            
+            .logo img {
+                width: 25%;
+                height: auto;
+            }
+
+            .nav-section h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .logo img {
+                width: 40%;
+                height: auto;
+            }
+            
+            .nav-section {
+                padding: 30px 10px;
+            }
+
+            .nav-cards {
+                gap: 20px;
+            }
+
+            .nav-percentage {
+                height: 50px;
+                font-size: 14px;
+            }
+
+            .nav-title {
+                font-size: 20px;
+            }
+
+            .nav-description {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="https://theuimonkey.webflow.io/" class="logo">
+            <img src="./logo.png" alt="Logo">
+        </a>
+    </header>
+
+    <div class="container">
+    <section class="nav-section">
+        <h2>Offer Pages</h2>
+        <div class="nav-cards">
+            <div class="nav-card">
+                <a href="plan-1.html" class="nav-percentage">Basic</a>
+                <div class="nav-title">$70 <span><s>$100</s></span></div>
+            </div>
+            <div class="nav-card">
+                <a href="plan-2.html" class="nav-percentage">Advanced</a>
+                <div class="nav-title">$600 <span><s>$900</s></span></div>
+            </div>
+            <div class="nav-card">
+                <a href="plan-3.html" class="nav-percentage">Premium</a>
+                <div class="nav-title">$4000 <span><s>$6000</s></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h3 class="contact-title">Questions? Get in touch</h3>
+        <div class="contact-icons">
+            <div class="contact-icon">
+                <a href="tel:+919403932830" class="contact-btn" title="Call us">
+                    <svg width="30px" height="30px" viewBox="0 0 0.9 0.9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.14 0.15h0.17l0.06 0.14 -0.09 0.06 -0.02 0.02v0.02l0.01 0.04q0.01 0.05 0.07 0.12C0.4 0.62 0.42 0.61 0.46 0.62L0.5 0.63h0.02L0.55 0.61 0.58 0.56l0.17 0.03v0.16a0.53 0.53 0 0 1 -0.61 -0.6m0.2 0.24L0.41 0.34A0.1 0.1 0 0 0 0.44 0.25L0.38 0.12A0.1 0.1 0 0 0 0.31 0.07H0.14q-0.06 0 -0.07 0.06C0.06 0.21 0.04 0.46 0.24 0.66s0.44 0.18 0.53 0.17Q0.83 0.81 0.83 0.76V0.6A0.1 0.1 0 0 0 0.77 0.53L0.6 0.5a0.1 0.1 0 0 0 -0.08 0.04L0.51 0.57H0.5Q0.46 0.57 0.41 0.51L0.35 0.42z"
+                            fill="#0c1223" />
+                    </svg>
+                </a>
+            </div>
+            <div class="contact-icon">
+                <a href="mailto:uimonkey.org@gmail.com" class="contact-btn" title="Email us"><svg width="30px"
+                        height="30px" viewBox="0 0 0.9 0.9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path x="3" y="6" width="18" height="12" rx="2" stroke="#0c1223" stroke-width="0.075"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            d="M0.188 0.225H0.713A0.075 0.075 0 0 1 0.787 0.3V0.6A0.075 0.075 0 0 1 0.713 0.675H0.188A0.075 0.075 0 0 1 0.112 0.6V0.3A0.075 0.075 0 0 1 0.188 0.225z" />
+                        <path d="M0.772 0.263 0.45 0.487 0.128 0.263" stroke="#0c1223" stroke-width="0.075"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+            <div class="contact-icon">
+                <a href="https://wa.me/+919403932830" class="contact-btn" title="WhatsApp us">
+                    <svg fill="#0c1223" width="30px" height="30px" viewBox="-0.075 -0.075 0.9 0.9"
+                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-whatsapp">
+                        <path
+                            d="M0.357 0C0.158 0.01 0.001 0.174 0.001 0.372a0.367 0.367 0 0 0 0.041 0.167L0.002 0.731a0.015 0.015 0 0 0 0.018 0.017l0.189 -0.044a0.375 0.375 0 0 0 0.161 0.039c0.204 0.003 0.373 -0.157 0.379 -0.359C0.756 0.167 0.576 -0.01 0.357 0zm0.225 0.576a0.292 0.292 0 0 1 -0.207 0.085 0.292 0.292 0 0 1 -0.13 -0.03l-0.026 -0.013 -0.116 0.027 0.024 -0.117 -0.013 -0.025A0.285 0.285 0 0 1 0.082 0.371c0 -0.078 0.03 -0.151 0.086 -0.206a0.294 0.294 0 0 1 0.207 -0.085c0.078 0 0.152 0.03 0.207 0.085a0.288 0.288 0 0 1 0.086 0.206c0 0.077 -0.031 0.151 -0.086 0.206z" />
+                        <path
+                            d="m0.557 0.452 -0.072 -0.021a0.027 0.027 0 0 0 -0.027 0.007l-0.018 0.018a0.027 0.027 0 0 1 -0.029 0.006c-0.034 -0.014 -0.106 -0.077 -0.125 -0.109a0.026 0.026 0 0 1 0.002 -0.029l0.015 -0.02a0.027 0.027 0 0 0 0.003 -0.027L0.277 0.208a0.027 0.027 0 0 0 -0.042 -0.01c-0.02 0.017 -0.044 0.043 -0.047 0.071 -0.005 0.05 0.017 0.114 0.099 0.19 0.095 0.088 0.171 0.1 0.221 0.088 0.028 -0.007 0.051 -0.034 0.065 -0.056a0.027 0.027 0 0 0 -0.015 -0.04" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    </div>
+
+</body>
